@@ -1,0 +1,585 @@
+*{
+	scroll-behavior: smooth;
+	color: var(--color-letra);
+	background-color: var(--color-fondo);
+}
+
+a {
+	text-decoration: none;
+}
+
+:root {
+    --color-celeste: #5fd9f2;
+    --color-celeste2: #e9f7fa;
+    --color-plomo: #bbbcbf;
+    --color-publicacion: #ffff;
+	--color-fondo: #d8d9da;
+	--color-letra: rgb(0, 0, 0);
+	--color-seleccion: #424242;
+	--color-transparente: rgba(255,255,255,.0);
+	--letra-roboto: 'Roboto', sans-serif;
+    --letra-montserrat: 'Montserrat', sans-serif;
+}
+/*________________________________*/
+/*         PARTE BARRA            */
+/*________________________________*/
+
+header{
+	width: 100%;
+	height: auto;
+	background: #ffff;
+	position: fixed;
+    padding: 10px 0px;
+	top: 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.151);
+    z-index: 99;
+}
+header *{
+	background: var(--color-transparente);
+}
+.contact-barra {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+    width: 100%;
+    height: 44px;
+}
+
+/* CONTACT LOGO */
+.contact-menu{
+    float: left;
+    width: 30px;
+    height: 25px;
+    margin: 12px 10px auto 10px;
+}
+.contact-menu-logo{
+    display: block;
+    width: 25px;
+    height: 20px;
+    background-image: url(/img/menu.png);
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+}
+.contact-menu-logo.open{
+    -webkit-transform: rotate(90deg);
+    transition: .5s;
+}
+.contact-menu-logo.open .body-menu.open{
+    transition: .5s;
+}
+.contact-logo {
+	width: 50px;
+	height: 40px;
+	background-image: url(/img/logo2.png);
+	background-position: center;
+	background-size: cover;
+}
+
+/* CONTACT BARRA TITLE */
+.contact *{
+	background-color: var(--color-transparente);
+}
+.contact-barra__title {
+    display: flex;
+    justify-content: flex-start;
+	font-family: var(--letra-roboto);
+	user-select: none;
+	letter-spacing: 5px;
+	width: auto;
+	height: 100%;
+}
+.contact-title { 
+    margin: auto 0 auto 0;
+    width: 170px;
+    height: 5;
+	color: var(--color-letra);
+	font-size: 20px;
+}
+.contact-title a{ 
+    margin: auto 10px;
+    width: 100%;
+    height: 100%;
+	color: var(--color-letra);
+	font-size: 20px;
+}
+
+/* CONTACT BUSCAR */
+.contact-buscar{
+    padding:  0 10px;
+    margin: auto 0 auto 15px;
+    top: 35px;
+    width: 30%;
+    height: 40px;
+    background-color: var(--color-celeste2);
+    outline: none;
+    font-size: 15px;
+    border-radius: 7px;
+}
+.buscar-text{
+    width: 80%;
+    height: 37px;
+    background-color: var(--color-transparente);
+    outline: none;
+    font-family: var(--letra-montserrat);
+    color: #777d74;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+}
+.buscar-boton{
+    float: right;
+    margin-top: 10px;
+    width: 27px;
+    height: 20px;
+    border: none;
+    filter: invert(80%) sepia(76%) saturate(2092%) hue-rotate(160deg) brightness(100%) contrast(94%);
+}
+.buscar-boton img{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* CONTACT PERFIL */
+.contact-perfil{
+    margin: auto 20px auto 0px;
+    width: auto;
+    height: 40px;
+}
+.contact-perfil a{
+	float: right;
+	width: 40px;
+	height: 40px;
+}
+.contact-perfil a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.contact-perfil p{
+    font-weight: bold;
+    font-family: var(--letra-montserrat);
+    font-size: 13px;
+	float: right;
+    margin: 12px 5px 0 10px;
+	width: auto;
+	height: auto;
+}
+.contact-perfil__img {
+	width: 50px;
+	height: 50px;
+}
+
+/*________________________________*/
+/*             BODY               */
+/*________________________________*/
+
+body {
+	margin: -60px 0px 0px 0px;
+	background-color: var(--color-transparente);
+}
+.contact-body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    justify-content: center;
+    left: 0;
+    margin-top: 125px;
+    width: 100%;
+	height: auto;
+    overflow:hidden;
+}
+.body-menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 63px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 98;
+    background-color: var(--color-publicacion);
+}
+.body-menu.open{
+    transform: translateX(0%);
+    transition: .5s;
+}
+.body-menu div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    margin:  15px 10px 0 10px;
+    font-family: var(--letra-montserrat);
+    font-size: 12px;
+    border-radius: 7px;
+    background-color: var(--color-transparente);
+}
+.body-menu div *{
+    background-color: var(--color-transparente);
+}
+.body-menu div:hover{
+    background-color: var(--color-fondo);
+}
+
+.body-menu div a{
+    margin-left: 10px;
+}
+.body-menu div img{
+    filter: invert(90%) sepia(5%) saturate(111%) hue-rotate(188deg) brightness(84%) contrast(89%);
+    margin-left: 20px;
+    width: 25px;
+}
+/* ______________________ */
+/*      BODY FOTOS         */
+/* ______________________ */
+.contact-cerrar-sesion{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);;
+    z-index: 100;
+}
+.contact-cerrar-sesion.open{
+    display: block;
+}
+.cerrar-sesion-main{
+    width: 450px;
+    height: 100px;
+    margin: 10% 50%;
+    padding: 30px;
+    transform: translate(-50%,50%);
+    border-radius: 7px;
+    background-color: var(--color-publicacion);
+}
+.cerrar-sesion-main *{
+    background-color: var(--color-publicacion);
+}
+.sesion-main-letra{
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    align-items: center;
+    font-family: var(--letra-montserrat);
+    font-size: 17px;
+}
+.sesion-main-letra p{
+    margin: auto 50px;
+}
+.sesion-main-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    color: var(--color-seleccion);
+    font-family: var(--letra-montserrat);
+    font-size: 19px;
+}
+.sesion-main-button a{
+    width: 170px;
+    height: auto;
+    padding: 15px;
+    border-radius: 7px;
+    text-align: center;
+    color: #ffff;
+    background-color: var(--color-celeste);
+    justify-content: center;
+}
+.sesion-main-button a:first-child{
+    background-color: var(--color-fondo);
+}
+.content-foto-main{
+    width: 100%;
+    max-width: 1190.600px;
+    height: auto;
+    margin:  20px 10%;
+    border-radius: 7px;
+    background-color: var(--color-publicacion);
+}
+.content-foto-main *{
+    background-color: var(--color-publicacion);
+}
+.main-title{
+    width: auto;
+    height: auto;
+    margin: 15px 30px 20px 30px;
+    font-family: var(--letra-roboto);
+    font-size: 20px;
+    border-bottom: 2px solid #f1f1f1;
+}
+.main-fotos{
+    columns: 3 100px;
+    column-gap: .5em;
+    margin: 0 30px 30px 30px;
+}
+.main-fotos div{
+    width: 100%;
+    height: auto;
+    margin-bottom: .5em;
+}
+.main-fotos div img{
+    max-width: 100%;
+    display: block;
+}
+
+/*________________________________________*/
+@media (max-width: 1075.98px){
+    .contact-buscar{
+        width: 300px;
+    }
+}
+@media (max-width: 807.98px){
+    .contact-title{ 
+        display: none;
+    }
+    .contact-barra__title { 
+        width: auto;
+    }
+}
+@media (max-width: 692.98px){
+    .contact-perfil p{
+        display: none;
+    }
+}
+@media (max-width: 671.98px){
+    .contact-body{
+        margin-top: 125px;
+        min-width: 387px;
+    }
+}
+@media (max-width: 503.98px){
+    .contact-title{ 
+        display: block;
+    }
+    .contact-title a{ 
+        margin: auto 10px;
+        width: 200px;
+        height: 5;
+        color: var(--color-letra);
+        font-size: 20px;
+    }
+    .contact-title{ 
+        width: 200px;
+    }
+    .contact-buscar{
+        display: none;
+    }
+    .contact-perfil{
+        display: none;
+    }
+}
+@media (max-width: 491.98px){
+    .contact-perfil{
+        display: none;
+    }
+}
+/*________________________________________*/
+/*              PROFILE USER              */
+/*________________________________________*/
+.body-portada{
+    width: 100%;
+    height: 350px;
+    margin-top: 0px;
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.body-portada a{
+    width: 100%;
+    height: 350px;
+    margin-top: 0px;
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.body-portada a{
+    width: 100%;
+    height: 350px;
+    margin-top: 0px;
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.body-perfil{
+    width: 100%;
+    max-width: 1135.600px;
+    height: 150px;
+    margin: -40px 10% 0 10%;
+    padding: 0 30px;
+    background-color: var(--color-publicacion);
+    border-radius: 7px;
+}
+.body-perfil *{
+    background-color: var(--color-publicacion);
+}
+.body-perfil-foto{
+    float: left;
+    margin-top: -30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.body-perfil-foto a{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.body-perfil-foto a img{
+    width: 100%;
+    height: 100%;
+}
+.body-perfil-biografia{
+    float: left;
+    margin: 0 0 0 20px;
+    width: 195px;
+}
+.perfil-biografia-name{
+    font-family: var(--letra-montserrat);
+    width: 100%;
+    height: auto;
+}
+.biografia-name{
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+}
+.biografia-seguidor{
+    font-size: 13px;
+    margin: 0;
+    width: 100%;
+}
+.perfil-biografia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    font-family: var(--letra-montserrat);
+    font-size: 13px;
+}
+.perfil-biografia div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    overflow: hidden;
+}
+.perfil-biografia div:first-child{
+    margin-top: 10px;
+}
+.body-perfil-boton{
+    float: right;
+    text-align: center;
+    width: 100px;
+    padding: 8px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-family: var(--letra-montserrat);
+    color: #ffff;
+    background-color: var(--color-celeste);
+}
+@media (max-width: 687.98px){
+    .body-perfil-foto{
+        float: none;
+        width: 150px;
+        height: 150px;
+    }
+    .body-perfil{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+}
+@media (max-width: 1482.98px){
+    .body-content-biografia {
+        display: flex;
+        flex-flow: column;
+        width: 800px;
+        min-width: 370px;
+        height: auto;
+        margin: 0 0 20px 0;
+        background-color: var(--color-fondo);
+    }
+}
+@media (max-width: 1005.98px){
+    .body-content-biografia {
+        width: 500px;
+    }
+    .content-barra-imgs {
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width: 618.98px){
+    .body-content-biografia {
+        width: 300px;
+    }
+    .content-barra-imgs {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 576.98px){
+    .cerrar-sesion-main {
+        width: 350px;
+        margin: 30% 50%;
+    }
+    .sesion-main-letra {
+        padding: 5px 0;
+        font-size: 17px;
+    }
+    .sesion-main-letra p {
+        text-align: center;
+        margin: auto 0;
+    }
+    .sesion-main-button {
+        font-size: 15px;
+    }
+    .sesion-main-button a {
+        width: 120px;
+    }
+}
+@media (max-width: 491.98px){
+    .contact-perfil{
+        display: none;
+    }
+    .cerrar-sesion-main {
+        width: 250px;
+        margin: 30% 50%;
+    }
+    .sesion-main-letra {
+        padding: 5px 0;
+        font-size: 15px;
+    }
+    .sesion-main-letra p {
+        text-align: center;
+        margin: auto 0;
+    }
+    .sesion-main-button {
+        font-size: 12px;
+    }
+    .sesion-main-button a {
+        width: 80px;
+    }
+}
